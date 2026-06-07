@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atelier Coupe | Barbershop Ottawa</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Space+Mono&display=swap"
+    rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">ATELIER<span>COUPE</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+        aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation"
+        style="border-color: var(--border);">
+        <i class="bi bi-list" style="color: var(--muted); font-size: 1.4rem;"></i>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+        <ul class="navbar-nav gap-3 mt-2 mt-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#team">Équipe</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="btn-accent nav-link" href="#booking"
+              style="padding: 0.4rem 1rem; border-radius: 4px; color: #0d0f14 !important;">Réserver</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <div class="hero-tag">Barbershop artisanal · Ottawa</div>
+          <h1>L'art de<br /><span>la coupe</span></h1>
+          <p class="hero-sub">
+            Chaque coupe est une signature. Prenez rendez-vous avec nos artisans et repartez transformé.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#booking" class="btn-accent">
+              <i class="bi bi-calendar-check me-2"></i>Prendre rendez-vous
+            </a>
+            <a href="#services" class="btn-outline-light-custom">Voir les services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-strip">
+      <div class="strip-item">
+        <i class="bi bi-clock"></i>
+        <span>Lun – Sam · 9h à 19h</span>
+      </div>
+      <div class="strip-item">
+        <i class="bi bi-geo-alt"></i>
+        <span>245 rue Rideau, Ottawa</span>
+      </div>
+      <div class="strip-item">
+        <i class="bi bi-telephone"></i>
+        <span>(613) 555-0182</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <p class="section-label">01 — Services</p>
+      <h2 class="section-title">Ce que nous faisons</h2>
+      <div class="section-line"></div>
+      <p style="color:var(--muted); font-size:0.95rem; max-width:500px; margin-bottom:2.5rem;">
+        Des prestations soignées, pensées pour chaque style et chaque budget.
+      </p>
+
+      <div class="row g-4">
+
+        <!-- Coupe classique -->
+        <div class="col-sm-6 col-lg-4 fade-in">
+          <div class="dark-card d-flex flex-column" data-service="Coupe classique">
+            <div class="service-icon"><i class="bi bi-scissors"></i></div>
+            <h5 class="mb-2">Coupe classique</h5>
+            <p style="color:var(--muted); font-size:0.88rem; flex:1; margin-bottom:0;">
+              Cisailles et rasoir, la coupe intemporelle. Précise, nette, efficace.
+            </p>
+            <div class="service-footer">
+              <span class="service-price">28 $</span>
+              <a href="#booking" class="service-link">Réserver <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coupe + barbe -->
+        <div class="col-sm-6 col-lg-4 fade-in">
+          <div class="dark-card d-flex flex-column" data-service="Coupe + barbe">
+            <div class="service-icon"><i class="bi bi-person"></i></div>
+            <h5 class="mb-2">
+              Coupe + barbe
+              <span class="popular-badge">Populaire</span>
+            </h5>
+            <p style="color:var(--muted); font-size:0.88rem; flex:1; margin-bottom:0;">
+              La combinaison signature : coupe soignée et mise en forme de la barbe.
+            </p>
+            <div class="service-footer">
+              <span class="service-price">45 $</span>
+              <a href="#booking" class="service-link">Réserver <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rasage traditionnel -->
+        <div class="col-sm-6 col-lg-4 fade-in">
+          <div class="dark-card d-flex flex-column" data-service="Rasage traditionnel">
+            <div class="service-icon"><i class="bi bi-brush"></i></div>
+            <h5 class="mb-2">Rasage traditionnel</h5>
+            <p style="color:var(--muted); font-size:0.88rem; flex:1; margin-bottom:0;">
+              Rasage à l'ancienne, mousse chaude et blaireau. Une expérience unique.
+            </p>
+            <div class="service-footer">
+              <span class="service-price">35 $</span>
+              <a href="#booking" class="service-link">Réserver <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coupe enfant -->
+        <div class="col-sm-6 col-lg-4 fade-in">
+          <div class="dark-card d-flex flex-column" data-service="Coupe enfant">
+            <div class="service-icon"><i class="bi bi-emoji-smile"></i></div>
+            <h5 class="mb-2">Coupe enfant</h5>
+            <p style="color:var(--muted); font-size:0.88rem; flex:1; margin-bottom:0;">
+              Coupe adaptée aux enfants de 2 à 12 ans, dans une ambiance détendue.
+            </p>
+            <div class="service-footer">
+              <span class="service-price">20 $</span>
+              <a href="#booking" class="service-link">Réserver <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Traitement capillaire -->
+        <div class="col-sm-6 col-lg-4 fade-in">
+          <div class="dark-card d-flex flex-column" data-service="Traitement capillaire">
+            <div class="service-icon"><i class="bi bi-droplet"></i></div>
+            <h5 class="mb-2">Traitement capillaire</h5>
+            <p style="color:var(--muted); font-size:0.88rem; flex:1; margin-bottom:0;">
+              Soin nourrissant pour redonner vigueur et brillance à votre chevelure.
+            </p>
+            <div class="service-footer">
+              <span class="service-price">22 $</span>
+              <a href="#booking" class="service-link">Réserver <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Retouche barbe -->
+        <div class="col-sm-6 col-lg-4 fade-in">
+          <div class="dark-card d-flex flex-column" data-service="Retouche barbe">
+            <div class="service-icon"><i class="bi bi-shield-check"></i></div>
+            <h5 class="mb-2">Retouche barbe</h5>
+            <p style="color:var(--muted); font-size:0.88rem; flex:1; margin-bottom:0;">
+              Nettoyage des contours et mise en forme rapide entre deux coupes.
+            </p>
+            <div class="service-footer">
+              <span class="service-price">18 $</span>
+              <a href="#booking" class="service-link">Réserver <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team">
+    <div class="container">
+      <p class="section-label">02 — Équipe</p>
+      <h2 class="section-title">Nos artisans</h2>
+      <div class="section-line"></div>
+
+      <div class="row g-4">
+
+        <div class="col-sm-6 col-lg-4 fade-in">
+          <div class="dark-card">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="team-avatar">JR</div>
+              <div>
+                <h5 class="mb-0">Jean-Robert</h5>
+                <span class="team-role">Maître barbier · 12 ans</span>
+              </div>
+            </div>
+            <p style="color:var(--muted); font-size:0.88rem; margin-bottom:0.75rem;">
+              Spécialiste des coupes classiques et du rasage traditionnel à l'ancienne.
+            </p>
+            <div>
+              <span class="skill-tag">Coupes classiques</span>
+              <span class="skill-tag">Rasage</span>
+              <span class="skill-tag">Barbe</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4 fade-in">
+          <div class="dark-card">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="team-avatar">SN</div>
+              <div>
+                <h5 class="mb-0">Sofia N.</h5>
+                <span class="team-role">Barbière · 6 ans</span>
+              </div>
+            </div>
+            <p style="color:var(--muted); font-size:0.88rem; margin-bottom:0.75rem;">
+              Experte en dégradés modernes et en traitements capillaires.
+            </p>
+            <div>
+              <span class="skill-tag">Dégradés</span>
+              <span class="skill-tag">Traitements</span>
+              <span class="skill-tag">Enfants</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4 fade-in">
+          <div class="dark-card">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="team-avatar">MA</div>
+              <div>
+                <h5 class="mb-0">Marcus A.</h5>
+                <span class="team-role">Barbier · 4 ans</span>
+              </div>
+            </div>
+            <p style="color:var(--muted); font-size:0.88rem; margin-bottom:0.75rem;">
+              Spécialiste des styles contemporains et des tailles de barbe complexes.
+            </p>
+            <div>
+              <span class="skill-tag">Styles modernes</span>
+              <span class="skill-tag">Barbe</span>
+              <span class="skill-tag">Dessin</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <p class="section-label">03 — À propos</p>
+      <h2 class="section-title">Plus qu'une coupe, un rituel</h2>
+      <div class="section-line"></div>
+
+      <div class="row g-4">
+
+        <div class="col-lg-7 fade-in">
+          <div class="dark-card">
+            <p style="color:var(--muted); font-size:0.95rem; margin-bottom:1rem;">
+              Atelier Coupe est un barbershop fondé à Ottawa en 2018. Nous croyons que prendre soin de soi devrait être
+              une expérience, pas une corvée.
+            </p>
+            <p style="color:var(--muted); font-size:0.95rem; margin-bottom:0;">
+              Notre espace allie l'esthétique du barbershop traditionnel au confort moderne. Chaque visite est une pause
+              dans la journée. Des produits artisanaux locaux, une équipe passionnée, et un souci du détail à chaque
+              prestation.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-5 fade-in">
+          <div class="row g-3">
+            <div class="col-4">
+              <div class="stat-card">
+                <span class="stat-num">1 200+</span>
+                <span class="stat-label">Clients</span>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat-card">
+                <span class="stat-num">6 ans</span>
+                <span class="stat-label">D'expérience</span>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat-card">
+                <span class="stat-num">3</span>
+                <span class="stat-label">Artisans</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section id="booking">
+    <div class="container">
+      <p class="section-label">04 — Rendez-vous</p>
+      <h2 class="section-title">Réservez en ligne</h2>
+      <div class="section-line"></div>
+      <p style="color:var(--muted); font-size:0.95rem; max-width:500px; margin-bottom:2.5rem;">
+        Simple, rapide et confirmé instantanément.
+      </p>
+
+      <div class="booking-card">
+
+        <!-- Step indicators -->
+        <div class="booking-header">
+          <div class="step-indicator active" id="step-ind-1">
+            <div class="step-dot">1</div>
+            <span>Service</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step-indicator" id="step-ind-2">
+            <div class="step-dot">2</div>
+            <span>Barbier &amp; Date</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step-indicator" id="step-ind-3">
+            <div class="step-dot">3</div>
+            <span>Confirmation</span>
+          </div>
+        </div>
+
+        <div class="booking-body">
+
+          <!-- Step 1 -->
+          <div class="booking-step" id="booking-step-1">
+            <p class="step-heading">Choisissez votre service</p>
+            <div class="svc-grid">
+              <button class="svc-btn" data-svc="Coupe classique" data-price="28">
+                <i class="bi bi-scissors"></i>
+                <span class="svc-name">Coupe classique</span>
+                <span class="svc-price">28 $</span>
+              </button>
+              <button class="svc-btn" data-svc="Coupe + barbe" data-price="45">
+                <i class="bi bi-person"></i>
+                <span class="svc-name">Coupe + barbe</span>
+                <span class="svc-price">45 $</span>
+              </button>
+              <button class="svc-btn" data-svc="Rasage traditionnel" data-price="35">
+                <i class="bi bi-brush"></i>
+                <span class="svc-name">Rasage traditionnel</span>
+                <span class="svc-price">35 $</span>
+              </button>
+              <button class="svc-btn" data-svc="Coupe enfant" data-price="20">
+                <i class="bi bi-emoji-smile"></i>
+                <span class="svc-name">Coupe enfant</span>
+                <span class="svc-price">20 $</span>
+              </button>
+              <button class="svc-btn" data-svc="Traitement capillaire" data-price="22">
+                <i class="bi bi-droplet"></i>
+                <span class="svc-name">Traitement capillaire</span>
+                <span class="svc-price">22 $</span>
+              </button>
+              <button class="svc-btn" data-svc="Retouche barbe" data-price="18">
+                <i class="bi bi-shield-check"></i>
+                <span class="svc-name">Retouche barbe</span>
+                <span class="svc-price">18 $</span>
+              </button>
+            </div>
+            <div class="step-actions">
+              <button class="btn-next" id="step1-next" disabled>
+                Suivant <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="booking-step hidden" id="booking-step-2">
+            <p class="step-heading">Choisissez un barbier et une date</p>
+            <div class="row g-4">
+              <div class="col-md-5">
+                <span class="field-label">Barbier</span>
+                <button class="barber-option" data-barber="Jean-Robert">
+                  <div class="barber-initials">JR</div>
+                  <div>
+                    <span class="barber-name">Jean-Robert</span>
+                    <span class="barber-spec">Coupes classiques</span>
+                  </div>
+                </button>
+                <button class="barber-option" data-barber="Sofia N.">
+                  <div class="barber-initials">SN</div>
+                  <div>
+                    <span class="barber-name">Sofia N.</span>
+                    <span class="barber-spec">Dégradés &amp; traitements</span>
+                  </div>
+                </button>
+                <button class="barber-option" data-barber="Marcus A.">
+                  <div class="barber-initials">MA</div>
+                  <div>
+                    <span class="barber-name">Marcus A.</span>
+                    <span class="barber-spec">Styles modernes</span>
+                  </div>
+                </button>
+              </div>
+              <div class="col-md-7">
+                <span class="field-label">Date</span>
+                <input type="date" id="booking-date" class="field-input mb-3" />
+                <span class="field-label">Heure disponible</span>
+                <div class="time-slots mb-3">
+                  <button class="time-btn" data-time="09:00">09:00</button>
+                  <button class="time-btn" data-time="10:00">10:00</button>
+                  <button class="time-btn" data-time="11:00">11:00</button>
+                  <button class="time-btn" data-time="13:00">13:00</button>
+                  <button class="time-btn" data-time="14:00">14:00</button>
+                  <button class="time-btn" data-time="15:00">15:00</button>
+                  <button class="time-btn" data-time="16:00">16:00</button>
+                  <button class="time-btn" data-time="17:00">17:00</button>
+                </div>
+              </div>
+            </div>
+            <div class="mt-3">
+              <span class="field-label">Votre nom</span>
+              <input type="text" id="booking-name" class="field-input" placeholder="Ex : Nahar Bousselham" />
+            </div>
+            <div class="step-actions">
+              <button class="btn-back" id="step2-back">
+                <i class="bi bi-arrow-left"></i> Retour
+              </button>
+              <button class="btn-next" id="step2-next" disabled>
+                Confirmer <i class="bi bi-check-lg"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="booking-step hidden" id="booking-step-3">
+            <div class="confirm-box">
+              <i class="bi bi-check-circle-fill check"></i>
+              <h4 class="mb-1">Rendez-vous confirmé !</h4>
+              <p style="color:var(--muted); font-size:0.9rem; margin-bottom:1.5rem;">
+                Voici le récapitulatif de votre réservation.
+              </p>
+              <div class="confirm-summary" id="confirm-details"></div>
+              <p style="color:var(--muted); font-size:0.8rem; margin-bottom:1.5rem;">
+                Un rappel vous sera envoyé 24h avant votre rendez-vous.
+              </p>
+              <button class="btn-accent" id="confirm-reset">
+                <i class="bi bi-plus me-1"></i>Prendre un autre rendez-vous
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <p class="section-label">05 — Contact</p>
+      <h2 class="section-title">Trouvez-nous</h2>
+      <div class="section-line"></div>
+
+      <div class="row g-4">
+
+        <div class="col-lg-6 fade-in">
+          <div class="contact-list">
+            <div class="contact-row">
+              <i class="bi bi-geo-alt-fill"></i>
+              <div>
+                <strong>Adresse</strong>
+                <p>245 rue Rideau, Ottawa, ON K1N 5Y4</p>
+              </div>
+            </div>
+            <div class="contact-row">
+              <i class="bi bi-telephone-fill"></i>
+              <div>
+                <strong>Téléphone</strong>
+                <p>(613) 555-0182</p>
+              </div>
+            </div>
+            <div class="contact-row">
+              <i class="bi bi-envelope-fill"></i>
+              <div>
+                <strong>Courriel</strong>
+                <p>info@ateliercoupe.ca</p>
+              </div>
+            </div>
+            <div class="contact-row">
+              <i class="bi bi-clock-fill"></i>
+              <div>
+                <strong>Heures d'ouverture</strong>
+                <p>Lun – Ven : 9h – 19h<br />Samedi : 9h – 17h<br />Dimanche : Fermé</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 fade-in">
+          <div class="map-box">
+            <i class="bi bi-map"></i>
+            <p>245 rue Rideau<br />Ottawa, ON</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      Conçu par <span>Rayen Ben Tamarzizt</span> &nbsp;·&nbsp;
+      SEG3525 — Université d'Ottawa &nbsp;·&nbsp; 2026
+    </p>
+  </footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Scroll fade animation -->
+  <script>
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(function (el) {
+      observer.observe(el);
+    });
+  </script>
+
+  <!-- Booking logic -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
