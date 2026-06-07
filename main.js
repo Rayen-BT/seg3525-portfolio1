@@ -53,12 +53,12 @@ function fillConfirmation() {
 function confirmRow(label, value) {
   return '<div class="confirm-row">'
     + '<span class="conf-label">' + label + '</span>'
-    + '<span class="conf-val">' + escapeHtml(value) + '</span>'
+    + '<span class="conf-val">' + escapeHtml(String(value)) + '</span>'
     + '</div>';
 }
 
 function escapeHtml(str) {
-  return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
 // Reset everything back to step 1
@@ -72,98 +72,104 @@ function resetForm() {
   document.querySelectorAll('.svc-btn').forEach(function (b) { b.classList.remove('selected'); });
   document.querySelectorAll('.barber-option').forEach(function (b) { b.classList.remove('selected'); });
   document.querySelectorAll('.time-btn').forEach(function (b) { b.classList.remove('selected'); });
-  document.getElementById('booking-name').value = '';
+
+  var nameInput = document.getElementById('booking-name');
+  if (nameInput) nameInput.value = '';
+
   document.getElementById('step1-next').disabled = true;
   document.getElementById('step2-next').disabled = true;
 
-  var today = new Date();
-  var todayStr = today.getFullYear() + '-'
-    + String(today.getMonth() + 1).padStart(2, '0') + '-'
-    + String(today.getDate()).padStart(2, '0');
-  document.getElementById('booking-date').value = todayStr;
-  state.date = todayStr;
-
+  setTodayDate();
   showStep(1);
   document.getElementById('booking').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-// Set today as the default/min date
-const dateInput = document.getElementById('booking-date');
-const today = new Date();
-const todayStr = today.getFullYear() + '-'
-  + String(today.getMonth() + 1).padStart(2, '0') + '-'
-  + String(today.getDate()).padStart(2, '0');
-dateInput.min = todayStr;
-dateInput.value = todayStr;
-state.date = todayStr;
+function setTodayDate() {
+  var dateInput = document.getElementById('booking-date');
+  if (!dateInput) return;
+  var today = new Date();
+  var todayStr = today.getFullYear() + '-'
+    + String(today.getMonth() + 1).padStart(2, '0') + '-'
+    + String(today.getDate()).padStart(2, '0');
+  dateInput.min = todayStr;
+  dateInput.value = todayStr;
+  state.date = todayStr;
+}
 
-// Step 1 — service selection
-document.querySelectorAll('.svc-btn').forEach(function (btn) {
-  btn.addEventListener('click', function () {
-    document.querySelectorAll('.svc-btn').forEach(function (b) { b.classList.remove('selected'); });
-    btn.classList.add('selected');
-    state.service = btn.dataset.svc;
-    state.price = btn.dataset.price;
-    document.getElementById('step1-next').disabled = false;
-  });
-});
+// Everything that touches the DOM waits for the page to be ready
+document.addEventListener('DOMContentLoaded', function () {
 
-document.getElementById('step1-next').addEventListener('click', function () {
-  showStep(2);
-  document.getElementById('booking').scrollIntoView({ behavior: 'smooth', block: 'start' });
-});
+  setTodayDate();
 
-// Step 2 — barber, date, time, name
-document.querySelectorAll('.barber-option').forEach(function (btn) {
-  btn.addEventListener('click', function () {
-    document.querySelectorAll('.barber-option').forEach(function (b) { b.classList.remove('selected'); });
-    btn.classList.add('selected');
-    state.barber = btn.dataset.barber;
-    checkStep2Ready();
-  });
-});
-
-document.querySelectorAll('.time-btn').forEach(function (btn) {
-  btn.addEventListener('click', function () {
-    document.querySelectorAll('.time-btn').forEach(function (b) { b.classList.remove('selected'); });
-    btn.classList.add('selected');
-    state.time = btn.dataset.time;
-    checkStep2Ready();
-  });
-});
-
-dateInput.addEventListener('change', function () {
-  state.date = this.value;
-  checkStep2Ready();
-});
-
-document.getElementById('booking-name').addEventListener('input', function () {
-  state.name = this.value;
-  checkStep2Ready();
-});
-
-document.getElementById('step2-back').addEventListener('click', function () {
-  showStep(1);
-});
-
-document.getElementById('step2-next').addEventListener('click', function () {
-  fillConfirmation();
-  showStep(3);
-  document.getElementById('booking').scrollIntoView({ behavior: 'smooth', block: 'start' });
-});
-
-// Step 3 — reset
-document.getElementById('confirm-reset').addEventListener('click', function () {
-  resetForm();
-});
-
-// Clicking "Réserver" on a service card pre-selects that service in the form
-document.querySelectorAll('.service-link').forEach(function (link) {
-  link.addEventListener('click', function () {
-    var card = link.closest('[data-service]');
-    if (!card) return;
-    document.querySelectorAll('.svc-btn').forEach(function (btn) {
-      if (btn.dataset.svc === card.dataset.service) btn.click();
+  // Step 1 — service selection
+  document.querySelectorAll('.svc-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.svc-btn').forEach(function (b) { b.classList.remove('selected'); });
+      btn.classList.add('selected');
+      state.service = btn.dataset.svc;
+      state.price = btn.dataset.price;
+      document.getElementById('step1-next').disabled = false;
     });
   });
+
+  document.getElementById('step1-next').addEventListener('click', function () {
+    showStep(2);
+    document.getElementById('booking').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  // Step 2 — barber, date, time, name
+  document.querySelectorAll('.barber-option').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.barber-option').forEach(function (b) { b.classList.remove('selected'); });
+      btn.classList.add('selected');
+      state.barber = btn.dataset.barber;
+      checkStep2Ready();
+    });
+  });
+
+  document.querySelectorAll('.time-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.time-btn').forEach(function (b) { b.classList.remove('selected'); });
+      btn.classList.add('selected');
+      state.time = btn.dataset.time;
+      checkStep2Ready();
+    });
+  });
+
+  document.getElementById('booking-date').addEventListener('change', function () {
+    state.date = this.value;
+    checkStep2Ready();
+  });
+
+  document.getElementById('booking-name').addEventListener('input', function () {
+    state.name = this.value;
+    checkStep2Ready();
+  });
+
+  document.getElementById('step2-back').addEventListener('click', function () {
+    showStep(1);
+  });
+
+  document.getElementById('step2-next').addEventListener('click', function () {
+    fillConfirmation();
+    showStep(3);
+    document.getElementById('booking').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  // Step 3 — reset
+  document.getElementById('confirm-reset').addEventListener('click', function () {
+    resetForm();
+  });
+
+  // Clicking "Réserver" on a service card pre-selects that service in the form
+  document.querySelectorAll('.service-link').forEach(function (link) {
+    link.addEventListener('click', function () {
+      var card = link.closest('[data-service]');
+      if (!card) return;
+      document.querySelectorAll('.svc-btn').forEach(function (btn) {
+        if (btn.dataset.svc === card.dataset.service) btn.click();
+      });
+    });
+  });
+
 });

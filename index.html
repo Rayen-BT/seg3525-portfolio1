@@ -81,7 +81,7 @@
   <!-- SERVICES -->
   <section id="services">
     <div class="container">
-      <p class="section-label">01 — Services</p>
+      <p class="section-label">02 — Services</p>
       <h2 class="section-title">Ce que nous faisons</h2>
       <div class="section-line"></div>
       <p style="color:var(--muted); font-size:0.95rem; max-width:500px; margin-bottom:2.5rem;">
@@ -190,7 +190,7 @@
   <!-- TEAM -->
   <section id="team">
     <div class="container">
-      <p class="section-label">02 — Équipe</p>
+      <p class="section-label">03 — Équipe</p>
       <h2 class="section-title">Nos artisans</h2>
       <div class="section-line"></div>
 
@@ -263,7 +263,7 @@
   <!-- ABOUT -->
   <section id="about">
     <div class="container">
-      <p class="section-label">03 — À propos</p>
+      <p class="section-label">04 — À propos</p>
       <h2 class="section-title">Plus qu'une coupe, un rituel</h2>
       <div class="section-line"></div>
 
@@ -313,7 +313,7 @@
   <!-- BOOKING -->
   <section id="booking">
     <div class="container">
-      <p class="section-label">04 — Rendez-vous</p>
+      <p class="section-label">05 — Rendez-vous</p>
       <h2 class="section-title">Réservez en ligne</h2>
       <div class="section-line"></div>
       <p style="color:var(--muted); font-size:0.95rem; max-width:500px; margin-bottom:2.5rem;">
@@ -346,39 +346,39 @@
           <div class="booking-step" id="booking-step-1">
             <p class="step-heading">Choisissez votre service</p>
             <div class="svc-grid">
-              <button class="svc-btn" data-svc="Coupe classique" data-price="28">
+              <button type="button" class="svc-btn" data-svc="Coupe classique" data-price="28">
                 <i class="bi bi-scissors"></i>
                 <span class="svc-name">Coupe classique</span>
                 <span class="svc-price">28 $</span>
               </button>
-              <button class="svc-btn" data-svc="Coupe + barbe" data-price="45">
+              <button type="button" class="svc-btn" data-svc="Coupe + barbe" data-price="45">
                 <i class="bi bi-person"></i>
                 <span class="svc-name">Coupe + barbe</span>
                 <span class="svc-price">45 $</span>
               </button>
-              <button class="svc-btn" data-svc="Rasage traditionnel" data-price="35">
+              <button type="button" class="svc-btn" data-svc="Rasage traditionnel" data-price="35">
                 <i class="bi bi-brush"></i>
                 <span class="svc-name">Rasage traditionnel</span>
                 <span class="svc-price">35 $</span>
               </button>
-              <button class="svc-btn" data-svc="Coupe enfant" data-price="20">
+              <button type="button" class="svc-btn" data-svc="Coupe enfant" data-price="20">
                 <i class="bi bi-emoji-smile"></i>
                 <span class="svc-name">Coupe enfant</span>
                 <span class="svc-price">20 $</span>
               </button>
-              <button class="svc-btn" data-svc="Traitement capillaire" data-price="22">
+              <button type="button" class="svc-btn" data-svc="Traitement capillaire" data-price="22">
                 <i class="bi bi-droplet"></i>
                 <span class="svc-name">Traitement capillaire</span>
                 <span class="svc-price">22 $</span>
               </button>
-              <button class="svc-btn" data-svc="Retouche barbe" data-price="18">
+              <button type="button" class="svc-btn" data-svc="Retouche barbe" data-price="18">
                 <i class="bi bi-shield-check"></i>
                 <span class="svc-name">Retouche barbe</span>
                 <span class="svc-price">18 $</span>
               </button>
             </div>
             <div class="step-actions">
-              <button class="btn-next" id="step1-next" disabled>
+              <button type="button" class="btn-next" id="step1-next" disabled>
                 Suivant <i class="bi bi-arrow-right"></i>
               </button>
             </div>
@@ -390,21 +390,21 @@
             <div class="row g-4">
               <div class="col-md-5">
                 <span class="field-label">Barbier</span>
-                <button class="barber-option" data-barber="Jean-Robert">
+                <button type="button" class="barber-option" data-barber="Jean-Robert">
                   <div class="barber-initials">JR</div>
                   <div>
                     <span class="barber-name">Jean-Robert</span>
                     <span class="barber-spec">Coupes classiques</span>
                   </div>
                 </button>
-                <button class="barber-option" data-barber="Sofia N.">
+                <button type="button" class="barber-option" data-barber="Sofia N.">
                   <div class="barber-initials">SN</div>
                   <div>
                     <span class="barber-name">Sofia N.</span>
                     <span class="barber-spec">Dégradés &amp; traitements</span>
                   </div>
                 </button>
-                <button class="barber-option" data-barber="Marcus A.">
+                <button type="button" class="barber-option" data-barber="Marcus A.">
                   <div class="barber-initials">MA</div>
                   <div>
                     <span class="barber-name">Marcus A.</span>
@@ -417,14 +417,14 @@
                 <input type="date" id="booking-date" class="field-input mb-3" />
                 <span class="field-label">Heure disponible</span>
                 <div class="time-slots mb-3">
-                  <button class="time-btn" data-time="09:00">09:00</button>
-                  <button class="time-btn" data-time="10:00">10:00</button>
-                  <button class="time-btn" data-time="11:00">11:00</button>
-                  <button class="time-btn" data-time="13:00">13:00</button>
-                  <button class="time-btn" data-time="14:00">14:00</button>
-                  <button class="time-btn" data-time="15:00">15:00</button>
-                  <button class="time-btn" data-time="16:00">16:00</button>
-                  <button class="time-btn" data-time="17:00">17:00</button>
+                  <button type="button" class="time-btn" data-time="09:00">09:00</button>
+                  <button type="button" class="time-btn" data-time="10:00">10:00</button>
+                  <button type="button" class="time-btn" data-time="11:00">11:00</button>
+                  <button type="button" class="time-btn" data-time="13:00">13:00</button>
+                  <button type="button" class="time-btn" data-time="14:00">14:00</button>
+                  <button type="button" class="time-btn" data-time="15:00">15:00</button>
+                  <button type="button" class="time-btn" data-time="16:00">16:00</button>
+                  <button type="button" class="time-btn" data-time="17:00">17:00</button>
                 </div>
               </div>
             </div>
@@ -433,10 +433,10 @@
               <input type="text" id="booking-name" class="field-input" placeholder="Ex : Nahar Bousselham" />
             </div>
             <div class="step-actions">
-              <button class="btn-back" id="step2-back">
+              <button type="button" class="btn-back" id="step2-back">
                 <i class="bi bi-arrow-left"></i> Retour
               </button>
-              <button class="btn-next" id="step2-next" disabled>
+              <button type="button" class="btn-next" id="step2-next" disabled>
                 Confirmer <i class="bi bi-check-lg"></i>
               </button>
             </div>
@@ -454,7 +454,7 @@
               <p style="color:var(--muted); font-size:0.8rem; margin-bottom:1.5rem;">
                 Un rappel vous sera envoyé 24h avant votre rendez-vous.
               </p>
-              <button class="btn-accent" id="confirm-reset">
+              <button type="button" class="btn-accent" id="confirm-reset">
                 <i class="bi bi-plus me-1"></i>Prendre un autre rendez-vous
               </button>
             </div>
@@ -468,7 +468,7 @@
   <!-- CONTACT -->
   <section id="contact">
     <div class="container">
-      <p class="section-label">05 — Contact</p>
+      <p class="section-label">06 — Contact</p>
       <h2 class="section-title">Trouvez-nous</h2>
       <div class="section-line"></div>
 
@@ -546,7 +546,155 @@
   </script>
 
   <!-- Booking logic -->
-  <script src="js/main.js"></script>
+  <script>
+    var bookingState = {
+      service: null,
+      price: null,
+      barber: null,
+      date: null,
+      time: null,
+      name: null
+    };
+
+    function showStep(n) {
+      document.querySelectorAll('.booking-step').forEach(function (el) {
+        el.classList.add('hidden');
+      });
+      document.querySelectorAll('.step-indicator').forEach(function (el) {
+        el.classList.remove('active', 'done');
+      });
+      document.getElementById('booking-step-' + n).classList.remove('hidden');
+      for (var i = 1; i < n; i++) {
+        document.getElementById('step-ind-' + i).classList.add('done');
+      }
+      document.getElementById('step-ind-' + n).classList.add('active');
+    }
+
+    function checkStep2Ready() {
+      var ok = bookingState.barber && bookingState.date && bookingState.time
+        && bookingState.name && bookingState.name.trim().length > 1;
+      document.getElementById('step2-next').disabled = !ok;
+    }
+
+    function fillConfirmation() {
+      var el = document.getElementById('confirm-details');
+      var d = new Date(bookingState.date + 'T12:00:00');
+      var dateStr = d.toLocaleDateString('fr-CA', {
+        weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+      });
+      function row(label, val) {
+        return '<div class="confirm-row"><span class="conf-label">' + label + '</span><span class="conf-val">' + String(val).replace(/</g, '&lt;') + '</span></div>';
+      }
+      el.innerHTML = row('Client', bookingState.name)
+        + row('Service', bookingState.service)
+        + row('Barbier', bookingState.barber)
+        + row('Date', dateStr)
+        + row('Heure', bookingState.time)
+        + row('Prix', bookingState.price + ' $');
+    }
+
+    function resetForm() {
+      bookingState = { service: null, price: null, barber: null, date: null, time: null, name: null };
+      document.querySelectorAll('.svc-btn').forEach(function (b) { b.classList.remove('selected'); });
+      document.querySelectorAll('.barber-option').forEach(function (b) { b.classList.remove('selected'); });
+      document.querySelectorAll('.time-btn').forEach(function (b) { b.classList.remove('selected'); });
+      document.getElementById('booking-name').value = '';
+      document.getElementById('step1-next').disabled = true;
+      document.getElementById('step2-next').disabled = true;
+      var today = new Date();
+      var todayStr = today.getFullYear() + '-'
+        + String(today.getMonth() + 1).padStart(2, '0') + '-'
+        + String(today.getDate()).padStart(2, '0');
+      document.getElementById('booking-date').value = todayStr;
+      bookingState.date = todayStr;
+      showStep(1);
+      document.getElementById('booking').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // Set today's date
+    (function () {
+      var today = new Date();
+      var todayStr = today.getFullYear() + '-'
+        + String(today.getMonth() + 1).padStart(2, '0') + '-'
+        + String(today.getDate()).padStart(2, '0');
+      var d = document.getElementById('booking-date');
+      d.min = todayStr;
+      d.value = todayStr;
+      bookingState.date = todayStr;
+    })();
+
+    // Service buttons
+    document.querySelectorAll('.svc-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('.svc-btn').forEach(function (b) { b.classList.remove('selected'); });
+        btn.classList.add('selected');
+        bookingState.service = btn.getAttribute('data-svc');
+        bookingState.price = btn.getAttribute('data-price');
+        document.getElementById('step1-next').disabled = false;
+      });
+    });
+
+    document.getElementById('step1-next').addEventListener('click', function () {
+      showStep(2);
+      document.getElementById('booking').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    // Barber buttons
+    document.querySelectorAll('.barber-option').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('.barber-option').forEach(function (b) { b.classList.remove('selected'); });
+        btn.classList.add('selected');
+        bookingState.barber = btn.getAttribute('data-barber');
+        checkStep2Ready();
+      });
+    });
+
+    // Time buttons
+    document.querySelectorAll('.time-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('.time-btn').forEach(function (b) { b.classList.remove('selected'); });
+        btn.classList.add('selected');
+        bookingState.time = btn.getAttribute('data-time');
+        checkStep2Ready();
+      });
+    });
+
+    document.getElementById('booking-date').addEventListener('change', function () {
+      bookingState.date = this.value;
+      checkStep2Ready();
+    });
+
+    document.getElementById('booking-name').addEventListener('input', function () {
+      bookingState.name = this.value;
+      checkStep2Ready();
+    });
+
+    document.getElementById('step2-back').addEventListener('click', function () {
+      showStep(1);
+    });
+
+    document.getElementById('step2-next').addEventListener('click', function () {
+      fillConfirmation();
+      showStep(3);
+      document.getElementById('booking').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    document.getElementById('confirm-reset').addEventListener('click', function () {
+      resetForm();
+    });
+
+    // "Réserver" links on service cards pre-select that service
+    document.querySelectorAll('.service-link').forEach(function (link) {
+      link.addEventListener('click', function () {
+        var card = link.closest('[data-service]');
+        if (!card) return;
+        var svcName = card.getAttribute('data-service');
+        document.querySelectorAll('.svc-btn').forEach(function (btn) {
+          if (btn.getAttribute('data-svc') === svcName) btn.click();
+        });
+      });
+    });
+  </script>
 
 </body>
 
